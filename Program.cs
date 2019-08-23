@@ -12,8 +12,10 @@ namespace example_pdf_to_gif_dotnet
         // Use the ceTe.DynamicPDF.Rasterizer namespace for the PdfRasterizer class.
         static void Main(string[] args)
         {
+            // Create a PdfRasterizer object using the source PDF to be converted to GIF image
             PdfRasterizer rasterizer = new PdfRasterizer(GetResourcePath("doc-a.pdf"));
 
+            // Call the Draw method with output image name, image format and the DPI
             rasterizer.Draw("output.gif", ImageFormat.Gif, ImageSize.Dpi600);
         }
 
